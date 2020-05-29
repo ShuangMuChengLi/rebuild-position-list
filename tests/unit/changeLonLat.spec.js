@@ -1,8 +1,3 @@
-# rebuild-position-list
-
-对地图点位数组数据进行重构。添加lonLat经纬度数组字段。并移除经纬度脏数据。防止地图渲染异常
-## Usage & TEST
-````
 
 import changeLonLat from '../../dist/index.umd'
 import _ from 'lodash'
@@ -184,5 +179,3 @@ for (const item of list) {
 test('传入的参数空数组是否为空', () => {
   expect(changeLonLat(list5)).toResultIsNull(list5)
 })
-
-````

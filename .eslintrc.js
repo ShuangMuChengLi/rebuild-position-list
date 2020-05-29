@@ -1,8 +1,10 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    jest: true
   },
+  plugins: ['jest'],
   extends: [
     'plugin:vue/essential',
     '@vue/standard'
@@ -12,7 +14,8 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'jest/no-undef': 'off'
   },
   overrides: [
     {
@@ -20,6 +23,7 @@ module.exports = {
         '**/__tests__/*.{j,t}s?(x)',
         '**/tests/unit/**/*.spec.{j,t}s?(x)'
       ],
+
       env: {
         jest: true
       }
