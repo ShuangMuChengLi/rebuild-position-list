@@ -1,6 +1,42 @@
 # rebuild-position-list
 
 对地图点位数组数据进行重构。添加lonLat经纬度数组字段。并移除经纬度脏数据。防止地图渲染异常
+## Install
+````
+yarn add rebuild-position-list
+import changeLonLat from 'rebuild-position-list'
+const list1 = [
+  {
+    lon: '1', lat: '2'
+  },
+  {
+    lon: '1.366346463', lat: '2.34234234223'
+  },
+  {
+    lon: '1.366346463w', lat: '2.34234234223'
+  }
+]
+changeLonLat(list1)
+输出
+[
+  {
+    "lon": "1",
+    "lat": "2",
+    "lonLat": [
+      1,
+      2
+    ]
+  },
+  {
+    "lon": "1.366346463",
+    "lat": "2.34234234223",
+    "lonLat": [
+      1.366346463,
+      2.34234234223
+    ]
+  }
+]
+````
 ## Usage & TEST
 ````
 

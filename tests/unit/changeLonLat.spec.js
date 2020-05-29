@@ -52,7 +52,6 @@ const list7 = [
     lon: 1, lat: 2
   }
 ]
-// console.log(changeLonLat(list1));
 
 expect.extend({
   toBeDivisibleBy (ary, keyName, ary2) {
